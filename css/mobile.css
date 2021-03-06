@@ -1,0 +1,49 @@
+@media only screen and (max-width: 768px) {
+	#first {
+		padding: 0;
+	}
+
+	header {
+		padding: 20px 25px;
+	}
+	#brand img {
+		height: 20px;
+	}
+	.nav-bar ul li a {
+		margin: 0 5px;
+	}
+	.model-bg img {
+		width: 250px;
+		object-fit: contain;
+	}
+	.model-text {
+		width: 337px;
+	}
+	h1 {
+		font-size: 1.8rem;
+	}
+	.model-text p {
+		width: 85%;
+	}
+	#features {
+		max-width: 500px;
+		margin: 0 auto;
+		padding: 50px 0;
+	}
+	.features-wrapper {
+		display: block;
+	}
+	#features .box p {
+		width: 300px;
+	}
+
+	#team {
+		flex-direction: column;
+		padding: 0 5px;
+	}
+	.team-bg img {
+		width: 20rem;
+		padding: 0;
+		margin-bottom: 50px;
+	}
+}

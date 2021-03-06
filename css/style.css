@@ -73,16 +73,31 @@ header{
     display: flex;
 }
 
+.nav-bar ul li a::after {
+	content: '';
+	height: 0.1rem;
+	width: 0;
+	background: hsl(0, 0%, 100%);
+	position: absolute;
+	left: 0;
+	bottom: -8px;
+	transition: 0.5s;
+}
+
 .nav-bar ul li a {
 	margin: 0 20px;
 	font-family: "Raleway", sans-serif;
 	font-weight: 400;
     color: rgb(196, 195, 193);
+	position: relative;
 }
 
 .nav-bar ul li a:hover {
-    color: hsl(0, 0%, 100%);
-    border-bottom: 1.5px white solid;
+	color: hsl(0, 0%, 100%);
+}
+
+.nav-bar ul li a:hover::after {
+	width: 100%;
 }
 
 /* Introduction */
@@ -123,7 +138,10 @@ header{
 }
 
 .model-text a:hover {
-	background: hsl(176, 68%, 64%);
+	animation-name: effect;
+	animation-duration: 2.5s;
+	animation-fill-mode: both;
+	animation-iteration-count: infinite;
 }
 
 /* features */
@@ -327,7 +345,7 @@ form {
 	border: none;
 	outline: none;
 	border-radius: 1.5rem;
-	width: 400px;
+	width: 33.3rem;
 	padding: 0.8rem 2rem;
 	color: rgba(0, 0, 0, 0.3);
 }
@@ -345,13 +363,24 @@ form {
 	border-radius: 1.8rem;
 	color: hsl(0, 0%, 100%);
 	background: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
-}
-
-.btn:hover {
-	background: hsl(176, 68%, 64%);
 	cursor: pointer;
 }
 
+.btn:hover {
+	animation-name: effect;
+	animation-duration: 2.5s;
+	animation-fill-mode: both;
+	animation-iteration-count: infinite;
+}
+
+@keyframes effect {
+	50% {
+        background: hsl(198, 60%, 50%)
+    }
+    100% {
+        background: hsl(176, 68%, 64%);
+	}
+}
 /* footer */
 footer {
 	margin: auto;
@@ -365,6 +394,10 @@ footer {
 	flex-direction: column;
 	width: 90%;
 	margin: 0 auto;
+}
+
+#logo {
+	margin-bottom: 2.5rem;
 }
 
 .company-footer .company-info {
@@ -409,6 +442,10 @@ footer {
 	align-self: start;
 }
 
+.insta {
+	width: 24px;
+	height: 24px;
+}
 .social li {
 	width: 40px;
     height: 40px;
